@@ -52,8 +52,8 @@ class MainWindow(QMainWindow):
         main_layout = QVBoxLayout()
 
         h_layout = QHBoxLayout()
-        h_layout.addWidget(self.taskList)
-        h_layout.addWidget(self.infoInput)
+        h_layout.addWidget(self.taskList, 2)
+        h_layout.addWidget(self.infoInput, 1)
 
         main_layout.addWidget(self.taskInput)
         main_layout.addWidget(self.addTaskButton)
