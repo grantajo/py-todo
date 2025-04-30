@@ -5,8 +5,12 @@ import sys
 
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton
 from PyQt5.QtWidgets import QLabel, QLineEdit, QVBoxLayout, QListWidget
-from PyQt5.QtWidgets import QAbstractItemView, QMessageBox
+from PyQt5.QtWidgets import QAbstractItemView, QMessageBox, QTextEdit
+from PyQt5 import QtGui
 from PyQt5.QtCore import Qt
+
+#import ctypes
+#ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('icon.png')
 
 TASKS_FILE = 'tasks.txt'
 
@@ -14,6 +18,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Todo List")
+#        self.setWindowIcon(QtGui.QIcon("icon.png"))
 
         self.addTaskButton = QPushButton("Add Task")
         self.addTaskButton.setCheckable(True)
@@ -105,6 +110,6 @@ if __name__ == "__main__":
     window = MainWindow()
 
     window.show()
+#    window.setWindowIcon(QtGui.QIcon("icon.png"))
 
     app.exec()
-
